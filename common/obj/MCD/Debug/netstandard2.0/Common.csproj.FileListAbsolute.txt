@@ -1,0 +1,8 @@
+C:\Users\Biraja\common\bin\MCD\Debug\netstandard2.0\Common.deps.json
+C:\Users\Biraja\common\bin\MCD\Debug\netstandard2.0\Common.dll
+C:\Users\Biraja\common\bin\MCD\Debug\netstandard2.0\Common.pdb
+C:\Users\Biraja\common\obj\MCD\Debug\netstandard2.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\Biraja\common\obj\MCD\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
+C:\Users\Biraja\common\obj\MCD\Debug\netstandard2.0\Common.AssemblyInfo.cs
+C:\Users\Biraja\common\obj\MCD\Debug\netstandard2.0\Common.dll
+C:\Users\Biraja\common\obj\MCD\Debug\netstandard2.0\Common.pdb
