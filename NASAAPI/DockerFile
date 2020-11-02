@@ -1,0 +1,11 @@
+FROM microsoft / dotnet: 2.1 - sdk  
+WORKDIR / app  
+# Copy csproj and restore as distinct layers 
+COPY *.csproj./ 
+COPY.. / RUN dotnet restore  
+# Copy everything  else and build  
+COPY.. /   
+#WORKDIR / app / DockerDemo  
+RUN dotnet publish - c Release - o out  
+WORKDIR / app / NASAAPI / out  
+ENTRYPOINT["dotnet", "NASAAPI.dll"]  
