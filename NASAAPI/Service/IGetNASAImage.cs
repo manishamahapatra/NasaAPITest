@@ -7,6 +7,6 @@ namespace NasaAPIProject.NASAAPI.Service
     public interface IGetNASAImage
     {
          Task<ServiceResponse<Photos>> GetNASAImageByAllDate();
-         Task<ServiceResponse<Photos>> GetNASAImageByDate(DateTime inputDate);
+         Task<ServiceResponse<Photos>> GetNASAImageByDate(string inputDate);
     }
 }

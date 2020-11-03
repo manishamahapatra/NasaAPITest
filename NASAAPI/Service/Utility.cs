@@ -20,9 +20,23 @@ namespace NasaAPIProject.NASAAPI.Service
 
             return dates;
         }
-        public static DateTime ParseDateTime(string date)
+        public static string ParseDateTime(string date)
         {
-            return !DateTime.TryParse(date, out var result) ? DateTime.MinValue : result;
+            DateTime d= DateTime.Parse(date);
+            return d.ToString("yyyy-MM-dd");
         }
+        public static string GetImageFileName(string hrefLink)
+        {
+            string[] parts = hrefLink.Split('/');
+            string fileName = "";
+
+            if (parts.Length > 0)
+                fileName = parts[parts.Length - 1];
+            else
+                fileName = hrefLink;
+
+            return fileName;
+        }
+
     }
 }

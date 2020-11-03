@@ -8,12 +8,14 @@ namespace NasaAPIProject.NASAAPI.Controllers
     public class GetNASAImageController:ControllerBase
     {
         private readonly IGetNASAImage _nasaImageService;
-        public GetNASAImageController(IGetNASAImage nasaImageService)
+        private readonly IDownloadImageservice _downloadImageService;
+        public GetNASAImageController(IGetNASAImage nasaImageService,IDownloadImageservice downloadImageService )
         {
              _nasaImageService=nasaImageService;
+             _downloadImageService=downloadImageService;
         }
 
-        [Route("api/GetNASAImageByDateAll")]
+       [Route("api/GetNASAImageByDateAll")]
         [HttpGet("GetNASAImageByDateAll")]
         public async Task<IActionResult> GetNASAImageByAllDate()
         {
@@ -21,11 +23,17 @@ namespace NasaAPIProject.NASAAPI.Controllers
         }
 
         [Route("api/GetNASAImageByDate/{inputdate}")]
-        [HttpGet]
+        [HttpGet("GetNASAImageByDate/{inputdate}")]
         public async Task<IActionResult> GetNASAImageByDate(string inputdate)
         {
             return Ok(await _nasaImageService.GetNASAImageByDate(Utility.ParseDateTime(inputdate)));
             
+        }
+        [Route("api/DownloadImage")]
+        [HttpGet("DownloadImage")]
+        public  async Task DownloadImage()
+        {
+            await _downloadImageService.ArchiveImages();
         }
     }
 }
