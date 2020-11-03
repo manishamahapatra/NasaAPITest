@@ -25,6 +25,7 @@ namespace NASAAPI
         {
             services.AddMvc();
             services.AddScoped<IGetNASAImage,GetNASAImageService>();
+            services.AddScoped<IDownloadImageservice,DownloadImageservice>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
